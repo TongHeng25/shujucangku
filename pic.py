@@ -107,7 +107,7 @@ def gediqu():
     map2.set_global_opts(
         title_opts=opts.TitleOpts(title="杭州市各城区房源平均总价"),
         legend_opts=opts.LegendOpts(is_show=True),
-        visualmap_opts=opts.VisualMapOpts(min_=sum_area["总价/万元"].min(), max_=sum_area["总价/万元"].max()),
+        visualmap_opts=opts.VisualMapOpts(min_=sum_area["总价/万元"].min(), max_=sum_area["总价/万元"].max(),range_color=['#CEB3B3','#EC1313']),
         tooltip_opts=opts.TooltipOpts(formatter='{b}:{c}万元')
     )
     return map2.render_embed()
@@ -162,7 +162,7 @@ def gediqufangyuanshu():
     map1.set_global_opts(
         title_opts=opts.TitleOpts(title="杭州市各区房源数量对比"),
         legend_opts=opts.LegendOpts(is_show=True),
-        visualmap_opts=opts.VisualMapOpts(min_=count_area["关注"].min(), max_=count_area["关注"].max())
+        visualmap_opts=opts.VisualMapOpts(min_=count_area["关注"].min(), max_=count_area["关注"].max(),range_color=['#CEB3B3','#EC1313'])
     )
     return map1.render_embed()
 
@@ -182,7 +182,7 @@ def gediquguanzhu():
     map4.set_global_opts(
         title_opts=opts.TitleOpts(title="杭州市各城区房源关注热度对比"),
         legend_opts=opts.LegendOpts(is_show=True),
-        visualmap_opts=opts.VisualMapOpts(min_=attention_area["关注"].min(), max_=attention_area["关注"].max())
+        visualmap_opts=opts.VisualMapOpts(min_=attention_area["关注"].min(), max_=attention_area["关注"].max(),range_color=['#CEB3B3','#EC1313'])
     )
     return map4.render_embed()
 
