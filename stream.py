@@ -8,7 +8,7 @@ import pic
 import streamlit0
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
-df=pd.read_csv('E:\\flask\\坤的可视化\\hangzhouhouse1.csv',encoding='utf-8')
+df=pd.read_csv('hangzhouhouse1.csv',encoding='utf-8')
 
 def main():
     #st.markdown(pic.gediqu(),unsafe_allow_html=True)
