@@ -42,7 +42,7 @@ def decoration(x):
 
 
 def Predict(input_cq,input_xq,input_zx,input_mj,input_jz,input_ll,input_ss,input_ts,input_ch,input_lc):
-    data = pd.read_csv("E:\\flask\\坤的可视化\\hangzhouhouse1.csv", encoding='utf-8')
+    data = pd.read_csv("hangzhouhouse1.csv", encoding='utf-8')
     data.dropna(how="any", inplace=True)
     data = data.loc[data["产权"] != "未知"]
     data = data.iloc[:, [0, 4, 5, 6, 7, 9, 10, 11, 12]]
