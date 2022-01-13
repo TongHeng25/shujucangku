@@ -12,7 +12,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-data=pd.read_csv("E:\\flask\\坤的可视化\\hangzhouhouse1.csv",encoding='utf-8')
+data=pd.read_csv("hangzhouhouse1.csv",encoding='utf-8')
 data.dropna(how="any",inplace=True)
 data=data.loc[data["产权"] != "未知"]
 
