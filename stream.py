@@ -39,9 +39,9 @@ def main():
             zongjia=Image.open('各总价房屋数.jpg')
             st.image(zongjia)
         if st.checkbox('各地区房源数'):
-            components.html(pic.gediqufangyuanshu(),height=420)
+            fangyuanshu()
         if st.checkbox('各地区关注热度'):
-            components.html(pic.gediquguanzhu(),height=420)
+            guanzhu()
         if st.checkbox('最受欢迎朝向'):
             components.html(pic.chaoxiang(),height=400)
         if st.checkbox('最受欢迎户型'):
@@ -95,6 +95,12 @@ def yuanshushuju():
     st.success(st.table(pic.diqu(diqu)))
     # mianji=st.selectbox('面积',[])
     #st.table(df.iloc[0:200])
+    
+def fangyuanshu():
+    components.html(pic.gediqufangyuanshu(),width=800,height=450)
+    
+def guanzhu():
+    components.html(pic.gediquguanzhu(),width=800,height=450)
 
 if __name__ == '__main__':
     main()
